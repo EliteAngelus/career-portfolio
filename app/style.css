@@ -1,0 +1,144 @@
+body, html{
+    height:100%;
+    margin: 0;
+    font-size: 16px;
+    font-family:"Lato", sans-serif;
+    font-weight: 400;
+    line-height:1.8em;
+    color: #666
+}
+
+.brand-logo{
+    font-family: 'Do Hyeon';
+}
+
+.nav-wrapper{
+    background-color: #000;
+    background-color: transparent;
+} 
+
+/* .navbar {
+    background-color: transparent;
+    background: transparent;
+    border-color: transparent;
+ }
+ 
+ .navbar li { 
+     color: #000 
+    }  */
+
+.nameAnimate {
+    /* Change FONT?? */
+    font: 600 4em/1 "Do Hyeon";
+    letter-spacing: 0;
+    padding: .25em 0 .325em;
+    display: block;
+    margin: 0 auto;
+    text-shadow: 0 0 80px rgba(255,255,255,.5);
+
+/* Clip Background Image */
+
+    background: url(http://www.radicalcartography.net/stars1.png) repeat-y;
+    -webkit-background-clip: text;
+    background-clip: text;
+
+/* Animate Background Image */
+
+-webkit-text-fill-color: transparent;
+-webkit-animation: aitf 80s linear infinite;
+
+/* Activate hardware acceleration for smoother animations */
+
+text-transform: translate3d(0,0,0);
+-webkit-backface-visibility: hidden;
+
+    }
+
+/* Animate Background Image */
+@-webkit-keyframes aitf {
+0% { background-position: 0% 50%; }
+100% { background-position: 100% 50%; }
+    }
+
+.nameScroll{
+    text-transform: uppercase;
+	letter-spacing: .5em;
+	display: inline-block;
+	border: 4px double rgba(255,255,255,.25);
+	border-width: 4px 0;
+	padding: 1.5em 0em;
+	position: absolute;
+	top: 18%;
+	left: 50%;
+	width: 40em;
+	margin: 0 0 0 -20em;
+}
+
+.img1, .img2 , .img3{
+    position: relative;
+    opacity: 0.70;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    background-attachment: fixed;
+}
+
+.section{
+    text-align: center;
+    padding: 50px 80px; 
+}
+
+.section-light{
+    background-color: #f4f4f4;
+    color: #666;
+}
+
+
+.section-dark{
+    background-color: #282e34;
+    color: #666;
+
+}
+
+.img1{
+    background-image :url("./images/sky.jpg");
+    min-height: 100%;
+}
+
+.img2{
+    background-image :url("./images/laptop.jpeg");
+    min-height: 400px;
+}
+
+.img3{
+    background-image :url("./images/city.jpeg");
+    min-height: 400px;
+}
+
+.text{
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    color:#000;
+    font-size: 27px;
+    letter-spacing: 8px; 
+    text-transform: uppercase
+}
+
+.text .border{
+    color: #fff;
+    padding: 20px;
+}
+
+
+
+@media(max-width:568px){
+.img1, .img2, .img3{
+    background-attachment: scroll;
+    }
+.background .border{
+    text-align: center;
+}
+}
