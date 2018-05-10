@@ -6,93 +6,151 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Career Portofolio</title>
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Do+Hyeon" rel="stylesheet">
-    <!-- CSS LINK -->
-    <link rel="stylesheet" href="./app/style.css">
+    <!-- Jquery Link -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <!-- Animate.CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <!-- AOS -->
+    <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-    <!-- Jquery -->
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-    crossorigin="anonymous"></script>
+    <!-- Icon -->
+    <link rel="icon" href="./app/images/rocket.png">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Do+Hyeon" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Skranji" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Acme" rel="stylesheet">
+    <!-- CSS LINK -->
+    <link rel="stylesheet" href="./app/style.css">
     <!-- Semantic Link -->
     <script src="semantic/dist/semantic.min.js"></script>
     <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
-    <!-- Compiled and minified CSS -->
+    <!-- <--Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
-
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
-
     <!-- Scroll Reveal Link -->
-
     <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
-
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
 </head>
 
 <body>
+    <!-- Audio that triggers when play button is hit in the Hangman Section -->
+    <audio id="audio">
+                <source src="./app/audio/decide.mp3" type="audio/mpeg" loop="">
+              </audio>
+    <!--Audio that triggers when the user get the correct answer  -->
+    <audio id="ding">
+                <source src="./app/audio/ding.mp3" type="audio/mpeg" loop="">
+              </audio>
     <div class="img1">
-            <nav class="transparent z-depth-0 foo">
-                    <div class="nav-wrapper">
-                      <div class="row">
-                        <div class="col s12">
-                          <a target="_blank" class="brand-logo">New<span class="hide-on-small-only">&nbsp;Beginnings</span></a>
-                          <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-                                  <ul class="right hide-on-med-and-down">
-                            <li><a href="https://github.com/dogfalo/materialize/" target="_blank">About</a></li>
-                            <li><a href="https://twitter.com/MaterializeCSS" target="_blank">Skills</a></li>
-                            <li><a href="http://next.materializecss.com/getting-started.html" target="_blank">Contact</a></li>
-                          </ul>
-                        </div>
-                      </div>
+        <nav class="transparent z-depth-0 foo">
+            <div class="nav-wrapper">
+                <div class="row">
+                    <div class="col s12">
+                        <a target="_blank" class="brand-logo"><span class="hide-on-small-only">&nbsp;New Beginnings</span></a>
+                        <ul class="right hide-on-med-and-down">
+                            <li><a href="#About">About</a></li>
+                            <li><a href="#skills">Skills</a></li>
+                            <li><a href="#Contact">Contact</a></li>
+                        </ul>
                     </div>
-                  </nav>
-                  
+                </div>
+            </div>
+        </nav>
+        <!-- FIRST HEADER SECTION -->
         <div class="text">
             <span class=" background foo2">
-                Portfolio Site
+                Portfolio 
             </span>
             <span class="nameAnimate">
-                Jeffrey Francois
+                <strong>Jeffrey Francois</strong>
             </span>
             <span class="foo3">&mdash; Web Developer &mdash;</span>
         </div>
     </div>
-    <section class=" section section-light">
-        <h2>About Me</h2>
+    <!-- ABOUT ME SECTION -->
+    <section class=" section section-light" id="About">
+        <div class="box a" data-aos="zoom-in">
+            <h5>&mdash; About Me &mdash;</h5>
+        </div>
+
+        <!-- <div class=a nimate data-aos=" fade-up ">
+        </div> -->
         <p>
-            I am passionate web developer who is interested in creating dynamics and life changing web applications. I am a recent Rutgers Coding Bootcamp graduate. Throughout the course, I have attained skills in front and back end technologies. I am eager to continue to my studies and look forward to work with others who are equally as passionate to create to create new technologies to change the world.  
+            I am passionate web developer who is interested in creating dynamics and life changing web applications. I am a recent Rutgers Coding Bootcamp graduate. Throughout the course, I have attained skills in front and back end technologies. I am eager to continue
+            to my studies and look forward to work with others who are equally as passionate to create new technologies to change the world.
         </p>
     </section>
-
+    <!-- WHAT I KNOW IMAGE SECTION -->
     <div class="img2">
         <div class="text">
-            <span class="border see">
-                Image two text
+            <span class="see" style="font-family: 'Slabo 27px', serif;">
+                <h4 style="color: aliceblue">&mdash;Here's What I know!&mdash;</h4>
             </span>
         </div>
     </div>
-    <section class="section section-dark">
-        <h2>Skills</h2>
-        <h2 id="wordToGuess">
-            _ _ _ _ _ _ _
-        </h2>
+    <!-- HANGMAN GAME SECTION -->
+    <section id="hang" class="section section-dark">
+
+
+        <div class="skillList animated slideInRight">
+            <div class=" list1">
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>Bootstrap</li>
+                    <li>JavaScript</li>
+                    <li>Node.Js</li>
+                </ul>
+            </div>
+            <div class="list2">
+                <ul>
+                    <li>Express</li>
+                    <li>Media Queries</li>
+                    <li>APIs</li>
+                    <li>Git and GitHub</li>
+                    <li>JSON</li>
+                </ul>
+                <h3>..And Growing!</h3>
+            </div>
+        </div>
+        <div class="hangMan">
+
+            <h5> Let's Play A Game </h5>
+
+            <button type="button" class="pulse btn btn-primary btn-lg" id="playButton">Play</button>
+            <a class="waves-effect waves-light btn-large resetButton">Next Word</a>
+
+            <h2 data-aos="zoom-in-up" id="wordToGuess"></h2>
+            <h5 id="howTo">Press A Letter and Guess My Skills</h5>
+            <button type="button" class="btn btn-danger" id="skip">Or Skip</button>
+        </div>
     </section>
+
+    <!-- CONTACT SECTION -->
+    </div>
     <div class="img3">
         <div class="text">
-            <span class="border see">
-                Image three text
-            </span> 
+            <h4 style="color: aliceblue"> &mdash;Contact Information &mdash;</h4>
         </div>
     </div>
     <section class="section section-dark">
-        <h2>Contact</h2>
-        <p>
-            <p></p>
-        </p>
+        <p id="contact">Contact</p>
+        <!-- Contact Icons -->
+        <!-- <i class="fab fa-github"></i>
+        <i class="fab fa-linkedin"></i>
+        <i class="far fa-envelope"></i> -->
+
+        <p>Email: Jfrancois004@gmail.com</p>
+        <p>Phone: 347-470-8259</p>
+
     </section>
 
-<script src="./app/script.js"></script>
+
+    <script src="./app/script.js"></script>
 
 </body>
 
