@@ -9,6 +9,11 @@
                     color: #666;
                 }
                 
+                .userHint {
+                    font-family: 'Skranji', cursive;
+                    color: red
+                }
+                
                 #hang,
                 .row {
                     font-size: 20px;
@@ -16,6 +21,11 @@
                     color: white;
                     margin-left: auto;
                     margin-right: auto;
+                }
+                
+                .messageToUser {
+                    font-family: 'Righteous', cursive;
+                    font-size: 30px
                 }
                 
                 #skip {
@@ -118,7 +128,7 @@
                 }
                 
                 .img3 {
-                    background-image: url("./images/city.jpeg");
+                    background-image: url("./images/portfolio2.jpeg");
                     height: 400px;
                 }
                 
@@ -130,6 +140,7 @@
                 
                 h5 {
                     font-family: 'Skranji', cursive;
+                    color: white
                 }
                 
                 .text {
