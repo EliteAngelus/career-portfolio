@@ -1,15 +1,11 @@
+// ANIMATED ON SCROLL INITIALIZE
 AOS.init();
 
-
-
+// HIDES RESET BUTTON AND SKILL LIST 
 $(".resetButton").hide();
 $(".skillList").hide();
+$("#Complete").hide();
 // Hide Known tech reveal
-
-// BUTTON FOR MODAL
-$('#btnTest').click(function() {
-    $('#myModal').modal('show');
-});
 
 // This handles the Scoll Reveal for the Header and Navigation Bar. 
 window.sr = ScrollReveal({ reset: true });
@@ -20,39 +16,38 @@ sr.reveal('.foo3', { duration: 7000 });
 // WORD BANK AND HINT!!
 let wordBank = [{
         name: "javascript",
-        hint: "Logic, writing games?",
+        hint: "The Most Popular programming Language? Hmm..What is it?",
 
     },
     {
         name: "html",
-        hint: "A markup language..so yeah.",
+        hint: "A Markup Language,this string is embedded in it? 🤔",
 
-    }
+    },
+    {
+        name: "CSS",
+        hint: "This language shows that I have style..The hint is Style",
+
+    },
+    {
+        name: "API",
+        hint: "Application Programming Interface, Acronym please..😵",
+
+    },
 ];
 
+console.log(wordBank);
 
 // Pick a random word from the array
 var randomWord = wordBank[Math.floor(Math.random() * wordBank.length)].name;
 var chosenWordInLetters = randomWord.split("");
-
-
-
 
 console.log(randomWord);
 var wrongGuesses = [];
 var arrayOfAllLetters = [];
 var wordAsUnderscorers = [];
 
-// Semi display the words 
-// Create an onKeyup Function for the user to guess the words.
-
-// User Decision 
-
-
-
-
-
-// PLAY BUTTON
+// PLAY BUTTON on click function to trigger hangman game
 $("#playButton").on('click', function startGame() {
 
     $("#howTo").empty
@@ -65,8 +60,6 @@ $("#playButton").on('click', function startGame() {
         $("#playButton").hide();
 
         userInput();
-
-
     });
 
     for (var z = 0; z < wordBank.length; z++) {
@@ -95,8 +88,6 @@ $("#playButton").on('click', function startGame() {
     }
 });
 
-
-
 function checkLetter(e) {
     // PARAMETER IS SET TO "e"
     // A VARIABLE SET TO FALSE. MY GUESS IS THIS WILL BE USED LETTER TO TRIGGER AN EVENT IF IT'S MADE TO BE TRUE.
@@ -122,14 +113,11 @@ function checkLetter(e) {
                 document.getElementById('wordToGuess').innerHTML = wordAsUnderscorers.join(" ");
             }
         }
-
     }
-
-
     if (wordAsUnderscorers.indexOf("_") == -1) {
 
         for (var x = 0; x < wordBank.length; x++) {
-            if (randomWord === wordBank[x]) {
+            if (randomWord === wordBank[x].name) {
                 wordBank.splice(x, 1);
             }
         }
@@ -150,17 +138,32 @@ function checkLetter(e) {
         $(".resetButton").show()
         $(".userHint").empty();
 
-
         // Let User know How many Words there are left.
         // When There are no words left show user all answers and additionals technologies known. 
     }
 
+    if (wordBank.length < 1) {
+        $(".hangMan").empty();
+        var newSpace = document.getElementById("hang");
+        var pThree = document.createElement("p");
+        pThree.classList.add("userHint");
+        pThree.innerHTML = "You've Done it! Easy Huh?"
+        newSpace.appendChild(pThree);
+
+        $("#Complete").show();
+    }
 }
 
-// Let user know when they got the word correct
+$("#Complete").on("click", function() {
+    document.getElementById('audio').pause();
+    $(".skillList").show();
+    $(".hangMan").hide();
+    $(".messageToUser").hide();
+    $(".userHint").hide();
+    $("#Complete").hide();
 
-// Audio will begin to play
 
+})
 
 $(".resetButton").on("click", function reset() {
     $("#playButton").show();
@@ -181,8 +184,8 @@ $("#skip").on("click", function() {
     $(".hangMan").hide();
     $(".messageToUser").hide();
     $(".userHint").hide();
+    $(".Complete").hide();
 })
-
 
 function userInput() {
     document.onkeyup = function(e) {
@@ -193,5 +196,3 @@ function userInput() {
 
     }
 }
-
-// When the user correctly guesses the word logic should cycle to next word.

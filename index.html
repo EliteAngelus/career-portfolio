@@ -21,8 +21,13 @@
     <link href="https://fonts.googleapis.com/css?family=Do+Hyeon" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Acme" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Righteous|Skranji" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Kavivanar" rel="stylesheet">
     <!-- CSS LINK -->
-    <link rel="stylesheet" href="./app/style.css">
+    <link rel="stylesheet" href="./app/CSS/nameStyle.css">
+    <link rel="stylesheet" href="./app/CSS/elements.css">
+    <!-- <link rel="stylesheet" href="./app/style.css"> -->
+    <link rel="stylesheet" href="./app/CSS/style.css">
+
     <!-- Semantic Link -->
     <script src="semantic/dist/semantic.min.js"></script>
     <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
@@ -50,11 +55,12 @@
             <div class="nav-wrapper">
                 <div class="row">
                     <div class="col s12">
-                        <a target="_blank" class="brand-logo"><span class="hide-on-small-only">&nbsp;New Beginnings</span></a>
+                        <a target="_blank" class="brand-logo home" id="nav-name"><span class="hide-on-small-only">&nbsp;Portfolio</span></a>
                         <ul class="right hide-on-med-and-down">
                             <li><a href="#About">About</a></li>
-                            <li><a href="#skills">Skills</a></li>
-                            <li><a href="#Contact">Contact</a></li>
+                            <li><a href="#game">Skills</a></li>
+                            <li><a href="#apps">Apps</a></li>
+                            <li><a href="#contact">Contact</a></li>
                         </ul>
                     </div>
                 </div>
@@ -62,9 +68,9 @@
         </nav>
         <!-- FIRST HEADER SECTION -->
         <div class="text">
-            <span class=" background foo2">
+            <!-- <span class=" background foo2">
                 Portfolio 
-            </span>
+            </span> -->
             <span class="nameAnimate">
                 <strong>Jeffrey Francois</strong>
             </span>
@@ -81,11 +87,15 @@
         </div> -->
         <p>
             I am passionate web developer who is interested in creating dynamics and life changing web applications. I am a recent Rutgers Coding Bootcamp graduate. Throughout the course, I have attained skills in front and back end technologies. I am eager to continue
-            to my studies and look forward to work with others who are equally as passionate to create new technologies to change the world.
+            to my studies and look forward to work with others who are equally as passionate to create new technologies to change the world. Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia accusantium totam quisquam illo hic consequatur
+            non quis id sapiente, quia repellendus culpa, quos ab impedit ut, sequi sunt dolore ullam. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet adipisci mollitia deserunt sed est hic earum sit, veritatis voluptates modi magni, ipsum
+            illo facere possimus exercitationem dolor odit nihil sunt tempore id nam voluptate ad aperiam. Sunt, aliquid nam? Quas, reiciendis ducimus corrupti nobis suscipit vitae rem maxime culpa voluptates alias, neque labore error quibusdam distinctio
+            voluptate quam tempora vero a. Fugiat minus, maxime error deserunt enim nobis debitis, nemo iure qui repudiandae quasi perspiciatis dignissimos incidunt explicabo. Nisi, vel sunt! Harum nam voluptatum, temporibus qui pariatur distinctio sequi
+            asperiores voluptate blanditiis obcaecati, optio vel et? Consequuntur tempore nemo et.
         </p>
     </section>
     <!-- WHAT I KNOW IMAGE SECTION -->
-    <div class="img2">
+    <div id="game" class="img2">
         <div class="text">
             <span class="see" style="font-family: 'Slabo 27px', serif;">
                 <h4 style="color: aliceblue">&mdash;Here's What I know!&mdash;</h4>
@@ -95,26 +105,12 @@
     <!-- HANGMAN GAME SECTION -->
     <section id="hang" class="section section-dark">
         <div class="skillList animated slideInRight">
-            <div class=" list1">
-                <ul>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>Bootstrap</li>
-                    <li>JavaScript</li>
-                    <li>Node.Js</li>
-                </ul>
-            </div>
-            <div class="list2">
-                <ul>
-                    <li>Express</li>
-                    <li>Media Queries</li>
-                    <li>APIs</li>
-                    <li>Git and GitHub</li>
-                    <li>JSON</li>
-                </ul>
-                <h3>..And Growing!</h3>
-            </div>
+
+            <p class="list"> HTML | CSS | BootStrap | Javascript | Node.js</p>
+            <p class="list"> Express | Media Queries | APIs | Git and Github | JSON</p>
+            <H4>...And Growing!</H4>
         </div>
+
         <div class="hangMan">
 
             <h5> Let's Play A Game </h5>
@@ -124,27 +120,81 @@
 
             <h2 data-aos="zoom-in-up" id="wordToGuess"></h2>
             <button type="button" class="btn btn-danger" id="skip">Or Skip</button>
+
             <h5 id="howTo">Press A Letter and Guess My Skills</h5>
         </div>
+        <button type="button" class="btn btn-danger" id="Complete">Next Up!</button>
+
     </section>
+    <!-- WHAT I KNOW IMAGE SECTION -->
+    <div id="apps" class="img3">
+        <div class="text">
+            <span class="see" style="font-family: 'Slabo 27px', serif;">
+                <h4 style="color: aliceblue">&mdash;Show Your Work&mdash;</h4>
+            </span>
+        </div>
+    </div>
+
+    <section class=" section section-light" id="About">
+        <div class="box a" data-aos="zoom-in">
+            <h4 data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">&mdash; Accomplishments &mdash;</h4>
+        </div>
+
+        <p>
+            <!-- Trivia Game Linked Image -->
+            <a href="https://eliteangelus.github.io/TriviaGame/"><img data-aos="fade-up" data-aos-duration="3000" class="work-image" src="./app/images/Trivia.png"></a>
+
+            <!-- Tonguez Project Linked Image -->
+            <a href="https://github.com/EliteAngelus/Project-2"><img data-aos="fade-up" data-aos-duration="3000" class="work-image" src="./app//images/tonguez.png"></a>
+            <!-- Crystal Game Linked Image -->
+            <a href="https://eliteangelus.github.io/week-4-game/"><img data-aos="fade-up" data-aos-duration="3000" class="work-image" src="./app//images/crystal.png"></a>
+            <!-- pokemon battle frontier -->
+            <a href="https://pokemon-battle-frontier.herokuapp.com/"><img data-aos="fade-up" data-aos-duration="3000" class="work-image" src="./app//images/pokemon.png"></a>
+        </p>
+
+        <div data-aos="fade-down" data-aos-easing="linear" data-aos-duration="3000">
+            <p style="font-family: 'Kavivanar', cursive;">
+                <!-- Trivia Game Linked Image -->
+                <a id="sub" href="https://eliteangelus.github.io/TriviaGame/">Trivia Game</a>
+
+                <!-- Trivia Game Linked Image -->
+                <a id="sub" href="https://eliteangelus.github.io/TriviaGame/">Project Tonguez</a>
+                <!-- Trivia Game Linked Image -->
+                <a id="sub" href="https://eliteangelus.github.io/TriviaGame/">The Crystal Game</a>
+                <!-- Trivia Game Linked Image -->
+                <a id="sub" href="https://eliteangelus.github.io/TriviaGame/">Project Pokemon</a>
+
+            </p>
+        </div>
+    </section>
+
     <!-- CONTACT SECTION -->
     </div>
-    <div class="img3">
+    <div class="img4">
         <div class="text">
             <h4 style="color: aliceblue"> &mdash;Contact Information &mdash;</h4>
         </div>
     </div>
-    <section class="section section-dark">
-        <p id="contact">Contact</p>
-        <!-- Contact Icons -->
-        <!-- <i class="fab fa-github"></i>
-        <i class="fab fa-linkedin"></i>
-        <i class="far fa-envelope"></i> -->
+
+    <!--  REACH ME SECTION -->
+    <section class="reachMe section section-dark">
+        <p id="contact" style="color: bisque">CONTACT ME</p>
 
         <p>Email: Jfrancois004@gmail.com</p>
         <p>Phone: 347-470-8259</p>
-    </section>
 
+        <!-- Contact Icons -->
+        <a href="https://www.linkedin.com/in/jeffrey-francois-9b36125b/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/EliteAngelus" target="_blank"><i class="fab fa-github-square"></i></a>
+        <!-- <i class="fas fa-envelope-square"></i> -->
+
+        <br>
+        <a class="buttons" href="https://github.com/EliteAngelus/career-portfolio"> Portfolio |</a>
+        <a class="buttons" href="https://drive.google.com/file/d/1VO7QXEvtQZjMTw0koXaKnQaCtZcz1DyA/view?usp=sharing" target="_blank"> Resume </a>
+        <!-- <a class="buttons" href="portfolio.html" target="_blank"> Stack </a> -->
+
+
+    </section>
 
     <script src="./app/script.js"></script>
 
