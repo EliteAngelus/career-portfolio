@@ -2,9 +2,9 @@
 AOS.init();
 
 // HIDES RESET BUTTON AND SKILL LIST 
-$(".resetButton").hide();
-$(".skillList").hide();
-$("#Complete").hide();
+$(".resetButton, .skillList, #Complete").hide();
+// $(".skillList").hide();
+// $("#Complete").hide();
 // Hide Known tech reveal
 
 // This handles the Scoll Reveal for the Header and Navigation Bar. 
@@ -36,16 +36,13 @@ let wordBank = [{
     },
 ];
 
-console.log(wordBank);
-
 // Pick a random word from the array
 var randomWord = wordBank[Math.floor(Math.random() * wordBank.length)].name;
 var chosenWordInLetters = randomWord.split("");
-
-console.log(randomWord);
 var wrongGuesses = [];
 var arrayOfAllLetters = [];
 var wordAsUnderscorers = [];
+console.log(randomWord);
 
 // PLAY BUTTON on click function to trigger hangman game
 $("#playButton").on('click', function startGame() {
@@ -62,30 +59,57 @@ $("#playButton").on('click', function startGame() {
         userInput();
     });
 
-    for (var z = 0; z < wordBank.length; z++) {
+    function wordChange() {
+        for (var z = 0; z < wordBank.length; z++) {
 
-        if (randomWord === wordBank[z].name) {
-            var newSpace = document.getElementById("hang");
-            var pTwo = document.createElement("p");
-            console.log(wordBank[z].hint);
-            pTwo.classList.add("userHint");
-            pTwo.innerHTML = "Here a hint: " + wordBank[z].hint;
-            newSpace.appendChild(pTwo);
+            if (randomWord === wordBank[z].name) {
+                var newSpace = document.getElementById("hang");
+                var pTwo = document.createElement("p");
+                console.log(wordBank[z].hint);
+                pTwo.classList.add("userHint");
+                pTwo.innerHTML = "Here a hint: " + wordBank[z].hint;
+                newSpace.appendChild(pTwo);
+            }
+
         }
+        // A for loop that is iterating through the chosen word and runs an IF statment
+        for (var i = 0; i < chosenWordInLetters.length; i++) {
+            // If statement that changes the letters in the chosen word into underscores
+            if (chosenWordInLetters[i % 2] === "") {
 
-    }
-    // A for loop that is iterating through the chosen word and runs an IF statment
-    for (var i = 0; i < chosenWordInLetters.length; i++) {
-        // If statement that changes the letters in the chosen word into underscores
-        if (chosenWordInLetters[i % 2] === "") {
-
-            wordAsUnderscorers.push("-");
-            document.getElementById('wordToGuess').innerHTML = wordAsUnderscorers.join(" ");
-        } else {
-            wordAsUnderscorers.push('_');
-            document.getElementById('wordToGuess').innerHTML = wordAsUnderscorers.join(" ");
+                wordAsUnderscorers.push("-");
+                document.getElementById('wordToGuess').innerHTML = wordAsUnderscorers.join(" ");
+            } else {
+                wordAsUnderscorers.push('_');
+                document.getElementById('wordToGuess').innerHTML = wordAsUnderscorers.join(" ");
+            }
         }
     }
+    wordChange();
+
+    $(".resetButton").on("click", function reset() {
+        // $("#playButton").show();
+        userInput();
+        randomWord = wordBank[Math.floor(Math.random() * wordBank.length)].name;
+        chosenWordInLetters = randomWord.split("");
+        wrongGuesses = [];
+        arrayOfAllLetters = [];
+        wordAsUnderscorers = [];
+        console.log(randomWord);
+        $(".resetButton").hide();
+        $(".messageToUser, wordToGuess, #howTo").empty();
+        // $("#wordToGuess").empty();
+        // $("#howTo").empty
+        // ITERATES THROUGH THE WORD BROKEN INTO LETTER AND CHANGES EACH LETTER TO A LOWERCASE.
+        chosenWordInLetters.forEach(function(letter) {
+            // HERE THE VARIABLE IS STORING EACH LETTER THAT HAS BEEN CHANGED TO A LOWER CASE 
+            var toLowerLetter = letter.toLowerCase()
+            arrayOfAllLetters.push(toLowerLetter);
+            $("#playButton").hide();
+
+        });
+        wordChange();
+    });
 });
 
 function checkLetter(e) {
@@ -137,11 +161,9 @@ function checkLetter(e) {
         document.getElementById('ding').play();
         $(".resetButton").show()
         $(".userHint").empty();
-
         // Let User know How many Words there are left.
         // When There are no words left show user all answers and additionals technologies known. 
     }
-
     if (wordBank.length < 1) {
         $(".hangMan").empty();
         var newSpace = document.getElementById("hang");
@@ -156,35 +178,21 @@ function checkLetter(e) {
 
 $("#Complete").on("click", function() {
     document.getElementById('audio').pause();
+    $(".hangMan, .messageToUser, .userHint, #Complete ").hide();
     $(".skillList").show();
-    $(".hangMan").hide();
-    $(".messageToUser").hide();
-    $(".userHint").hide();
-    $("#Complete").hide();
-
-
+    // $(".hangMan").hide();
+    // $(".messageToUser").hide();
+    // $(".userHint").hide();
+    // $("#Complete").hide();
 })
-
-$(".resetButton").on("click", function reset() {
-    $("#playButton").show();
-    randomWord = wordBank[Math.floor(Math.random() * wordBank.length)].name;
-    chosenWordInLetters = randomWord.split("");
-    wrongGuesses = [];
-    arrayOfAllLetters = [];
-    wordAsUnderscorers = [];
-    console.log(randomWord);
-    $(".resetButton").hide();
-    $(".messageToUser").empty();
-    $("#wordToGuess").empty();
-});
-
 $("#skip").on("click", function() {
     document.getElementById('audio').pause();
+    $(".hangMan, .messageToUser, .userHint, #Complete ").hide();
     $(".skillList").show();
-    $(".hangMan").hide();
-    $(".messageToUser").hide();
-    $(".userHint").hide();
-    $(".Complete").hide();
+    // $(".hangMan").hide();
+    // $(".messageToUser").hide();
+    // $(".userHint").hide();
+    // $(".Complete").hide();
 })
 
 function userInput() {
