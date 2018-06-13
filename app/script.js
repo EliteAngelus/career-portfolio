@@ -76,6 +76,7 @@ $("#playButton").on('click', function startGame() {
         for (var i = 0; i < chosenWordInLetters.length; i++) {
             // If statement that changes the letters in the chosen word into underscores
             if (chosenWordInLetters[i % 2] === "") {
+                console.log(chosenWordInLetters[i % 2]);
 
                 wordAsUnderscorers.push("-");
                 document.getElementById('wordToGuess').innerHTML = wordAsUnderscorers.join(" ");
