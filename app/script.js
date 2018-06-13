@@ -8,10 +8,10 @@ $(".resetButton, .skillList, #Complete").hide();
 // Hide Known tech reveal
 
 // This handles the Scoll Reveal for the Header and Navigation Bar. 
-window.sr = ScrollReveal({ reset: true });
-sr.reveal('.foo', { duration: 2000 });
-sr.reveal('.foo2', { duration: 5000 });
-sr.reveal('.foo3', { duration: 7000 });
+// window.sr = ScrollReveal({ reset: true });
+// sr.reveal('.foo', { duration: 2000 });
+// sr.reveal('.foo2', { duration: 5000 });
+// sr.reveal('.foo3', { duration: 7000 });
 
 // WORD BANK AND HINT!!
 let wordBank = [{
