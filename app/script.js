@@ -2,7 +2,7 @@
 AOS.init();
 
 // HIDES RESET BUTTON AND SKILL LIST 
-$(".resetButton, .skillList, #Complete").hide();
+$(".resetButton, #Complete").hide();
 // $(".skillList").hide();
 // $("#Complete").hide();
 // Hide Known tech reveal

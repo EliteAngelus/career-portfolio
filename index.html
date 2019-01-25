@@ -13,30 +13,17 @@
     <!-- AOS -->
     <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
     <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <!-- Icon -->
     <link rel="icon" href="./app/images/rocket.png">
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Do+Hyeon" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Acme" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Righteous|Skranji" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Kavivanar" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Acme|Black+Han+Sans|Do+Hyeon|Kavivanar|Skranji" rel="stylesheet">
     <!-- CSS LINK -->
     <link rel="stylesheet" href="./app/CSS/nameStyle.css">
     <link rel="stylesheet" href="./app/CSS/elements.css">
     <!-- <link rel="stylesheet" href="./app/style.css"> -->
     <link rel="stylesheet" href="./app/CSS/style.css">
-
-    <!-- Semantic Link -->
-    <script src="semantic/dist/semantic.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
     <!-- <--Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
-    <!-- Scroll Reveal Link -->
-    <!-- <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script> -->
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
 </head>
@@ -69,23 +56,39 @@
         <!-- FIRST HEADER SECTION -->
         <div class="text">
             <span class="nameAnimate">
-                <strong>Jeffrey Francois</strong>
+                <h2 class="name-title">Hello, I'm Jeff. I'm a Full-Stack Developer.</h2>
             </span>
             <span class="foo3">&mdash; Web Developer &mdash;</span>
+            <p class="learn-more">Learn more about me</p>
+            <div class="arrow bounce">
+                <a class="fas fa-angle-down" href="#"></a>
+            </div>
         </div>
     </div>
+
+    </div>
     <!-- ABOUT ME SECTION -->
+
+
     <section class=" section section-light" id="About">
-        <div class="box a" data-aos="zoom-in">
-            <h4>&mdash; About Me &mdash;</h4>
+        <!-- <div class="box a" data-aos="zoom-in">
+        </div> -->
+        <h2 class="article-title">Programming Origins</h2>
+        <hr>
+        <div class="paragraph-well">
+            <p class="first about-me">
+                Welcome to my Portfolio page, I am a web developer who is passionate about everything technology. I found myself following this path to help move the world in the right direction. Creating rich and robust web applications that will help enhance the lives
+                of the people who use it.</p>
+            <br>
+
+            <!-- Add in Photos, three pictures -->
+
+            <br>
+            <p class="about-me"> I hope to work with others who are equally passionate and continue to grow in a career path that continues to grow. Whether you need help with smaller scale projects or would like me to join your team, let us work together and use our creativity
+                to make a difference. </p>
+            </p>
+
         </div>
-        <p>
-            Welcome to my Portfolio page, I am a web developer who is passionate about everything technology. I found myself following this path to help move the world in the right direction. Creating rich and robust web applications that will help enhance the lives
-            of the people who use it. I am a quick learner who is enjoys looking forward to learning new technologies. Upon learning the basics of web developement this brush of knowledge acted as a catalyst that created an insatiable hunger to learn
-            more. This lead me to seek more and I enrolled in Rutgers coding course where I met many up and coming programmers and where we worked on incredible projects together. This helped deepen my infatuation for the field, and I look forward to
-            helping any business I am a part of to enchance there applications or help create new tech that will help change the world for the better. I hope to work with others who are equally passionate and continue to grow in a career path that continues
-            to grow. Whether you need help with smaller scale projects or would like me to join your team, let us work together and use our creativity to make a difference.
-        </p>
     </section>
     <!-- WHAT I KNOW IMAGE SECTION -->
     <div id="game" class="img2">
@@ -95,15 +98,38 @@
             </span>
         </div>
     </div>
+
     <!-- HANGMAN GAME SECTION -->
     <section id="hang" class="section section-dark">
-        <div class="skillList animated slideInRight">
+        <div class="skillList animated slideInRight knowledge">
+            <div class="front-end">
+                <div class="front-end-card">
+                    <h2 class="knowledge-header">Front End</h2>
+                    <p>Javascript</p>
+                    <p>Jquery</p>
+                    <p>CSS</p>
+                    <P>BootStrap</P>
+                    <p>HTML</p>
+                    <p>Media Queries</p>
+                </div>
+            </div>
+            <div class="back-end">
+                <div class="back-end-card">
+                    <h2 class="knowledge-header">Back End</h2>
+                    <p>Express.js</p>
+                    <p>Node.js</p>
+                    <p>Mongo</p>
+                    <p>Mongo.db</p>
+                    <p>Something Else</p>
+                    <p>One more</p>
+                </div>
 
-            <p class="list"> HTML | CSS | BootStrap | Javascript | Node.js</p>
+            </div>
+            <!-- <p class="list"> HTML | CSS | BootStrap | Javascript | Node.js</p>
             <p class="list"> Express | Media Queries | APIs | Git and Github | JSON</p>
-            <H4>...And Growing!</H4>
+            <H4>...And Growing!</H4> -->
         </div>
-        <div class="hangMan">
+        <!-- <div class="hangMan">
             <h5> Let's Play A Game </h5>
 
             <button type="button" class="pulse btn btn-primary btn-lg" id="playButton">Play</button>
@@ -114,10 +140,9 @@
 
             <h5 id="howTo">Press A Letter and Guess My Skills</h5>
         </div>
-        <button type="button" class="btn btn-danger" id="Complete">Next Up!</button>
-
+        <button type="button" class="btn btn-danger" id="Complete">Next Up!</button> -->
     </section>
-    <!-- WHAT I KNOW IMAGE SECTION -->
+
     <div id="apps" class="img3">
         <div class="text">
             <span class="see" style="font-family: 'Slabo 27px', serif;">
@@ -125,52 +150,67 @@
             </span>
         </div>
     </div>
-    <section class=" section section-light" id="About">
+    <!-- PROJECTS SECTIONS -->
+    <!-- Tonguez Project Linked Image -->
+    <!-- CSS GRID -->
+    <section class=" section section-light">
         <div class="box a" data-aos="zoom-in">
-            <h4 data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">&mdash; Accomplishments &mdash;</h4>
+            <h4 data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500"> Accomplishments</h4>
         </div>
-        <p>
-            <!-- Tonguez Project Linked Image -->
-            <a href="https://languagechat2017.herokuapp.com/"><img data-aos="fade-up" data-aos-duration="3000" class="work-image" src="./app//images/tonguez.png"></a>
-            <!-- Crystal Game Linked Image -->
-            <a href="https://eliteangelus.github.io/week-4-game/"><img data-aos="fade-up" data-aos-duration="3000" class="work-image" src="./app//images/crystal.png"></a>
-            <!-- pokemon battle frontier -->
-            <a href="https://pokemon-battle-frontier.herokuapp.com/"><img data-aos="fade-up" data-aos-duration="3000" class="work-image" src="./app//images/pokemon.png"></a>
-        </p>
-        <div data-aos="fade-down" data-aos-easing="linear" data-aos-duration="3000">
-            <p style="font-family: 'Kavivanar', cursive;">
-                <!-- Tonguez Game Linked Image -->
-                <a id="sub" href="https://github.com/EliteAngelus/Project-2">Project Tonguez</a>
-                <!-- Crystal game Linked Image -->
-                <a id="sub" href="https://github.com/EliteAngelus/week-4-game">The Crystal Game</a>
-                <!-- Pokemon Game Linked Image -->
-                <a id="sub" href="https://github.com/pinhop07/pokemon-battle-frontier">Project Pokemon</a>
-            </p>
-        </div>
-    </section>
+        <section>
+            <div class="projects animated bounceInRight">
+                <div class="odd-card">
+                    <p class="details">Tonguez is Language Learning Application that allows user to find another user to help teach them the language of their choice</p>
+                    <div class="project-card-title">
+                        <div class="thumbnail">
+                            <a href="https://languagechat2017.herokuapp.com/"><img class="work-image" src="./app//images/tonguez.png"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="projects animated bounceInLeft">
+                <div class="even-card">
+                    <div class="project-card-title">
+                        <div class="thumbnail">
+                            <a href="https://eliteangelus.github.io/week-4-game/"><img class="work-image" src="./app//images/crystal.png"></a>
+                        </div>
+                    </div>
+                    <p class="details">Details</p>
+                </div>
+            </div>
+            <div class="projects animated bounceInRight">
+                <div class="odd-card">
+                    <p class="details">Details</p>
+                    <div class="project-card-title">
+                        <div class="thumbnail">
+                            <a href="https://pokemon-battle-frontier.herokuapp.com/"><img class="work-image" src="./app//images/pokemon.png"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <!-- CONTACT SECTION -->
-    </div>
-    <div class="img4">
-        <div class="text">
-            <h4 style="color: aliceblue"> &mdash;Contact Information &mdash;</h4>
+        <!-- CONTACT SECTION -->
+        <div class="img4">
+            <div class="text">
+                <h4 style="color: aliceblue"> &mdash;Contact Information &mdash;</h4>
+            </div>
         </div>
-    </div>
-    <!--  REACH ME SECTION -->
-    <section class="reachMe section section-dark">
-        <p id="contact" style="color: bisque">CONTACT ME</p>
-        <p>Email: Jfrancois004@gmail.com</p>
-        <p>Phone: 347-470-8259</p>
-        <!-- Contact Icons -->
-        <a href="https://www.linkedin.com/in/jeffrey-francois-9b36125b/" target="_blank"><i class="fab fa-linkedin"></i></a>
-        <a href="https://github.com/EliteAngelus" target="_blank"><i class="fab fa-github-square"></i></a>
-        <!-- <i class="fas fa-envelope-square"></i> -->
-        <br>
-        <a class="buttons" href="https://github.com/EliteAngelus/career-portfolio"> Portfolio |</a>
-        <a class="buttons" href="https://drive.google.com/file/d/1TW9u1jjsl0YCI1bmkKI67sn4kz71uLTf/view?usp=sharing" target="_blank"> Resume </a>
-        <!-- <a class="buttons" href="portfolio.html" target="_blank"> Stack </a> -->
-    </section>
-    <script src="./app/script.js"></script>
+        <!--  REACH ME SECTION -->
+        <section class="reachMe section section-dark">
+            <p id="contact" style="color: bisque">CONTACT ME</p>
+            <p>Email: Jfrancois004@gmail.com</p>
+            <p>Phone: 347-470-8259</p>
+            <!-- Contact Icons -->
+            <a href="https://www.linkedin.com/in/jeffrey-francois-9b36125b/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/EliteAngelus" target="_blank"><i class="fab fa-github-square"></i></a>
+            <!-- <i class="fas fa-envelope-square"></i> -->
+            <br>
+            <a class="buttons" href="https://github.com/EliteAngelus/career-portfolio"> Portfolio |</a>
+            <a class="buttons" href="https://drive.google.com/file/d/1TW9u1jjsl0YCI1bmkKI67sn4kz71uLTf/view?usp=sharing" target="_blank"> Resume </a>
+            <!-- <a class="buttons" href="portfolio.html" target="_blank"> Stack </a> -->
+        </section>
+        <script src="./app/script.js"></script>
 
 </body>
 
