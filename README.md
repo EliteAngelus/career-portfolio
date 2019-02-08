@@ -1,4 +1,4 @@
-# career-portfolio
+# My Career Portfolio 
  Welcome to my Career Portfolio!
 
  <h2>Getting Started</h2>
